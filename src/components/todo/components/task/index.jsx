@@ -1,9 +1,16 @@
 
+import { useContext } from 'react';
+import { TasksContext } from '../../../../context/tasks.context';
 import './style.css'
 
 function Task ({task}) {
 
+    const{onDeleteTasks } = useContext(TasksContext)
 
+
+    const handleRemove = () => {
+        onDeleteTasks(task.id)
+    }
 
     return(
 
@@ -13,7 +20,7 @@ function Task ({task}) {
                     <div className={task.status==='done'?'task-state-two':'task-state'}></div>
                     <span className='task-title'>{task.title}</span>
                 </div>
-                <button >X</button>
+                <button onClick={handleRemove} >X</button>
             </div>
             <p className='task-info'>#{task.id} created on {task.date}</p>
         </div>

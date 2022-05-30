@@ -5,6 +5,7 @@ function Form ({onCancel,onAdd}){
 
     const [text,setText] = useState('')
 
+
     const handleText = e => {
         const val = e.target.value
         setText(val)
