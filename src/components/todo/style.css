@@ -1,11 +1,16 @@
 
 .container-todo{
-    width: 300px;
+    width: 33%;
     height: 500px;
     background-color: #f6f8fa;
     margin: 20px;
     border: 1px solid silver;
     border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
 }
@@ -16,7 +21,6 @@
     align-items: center;
     /* background-color: blueviolet; */
     height: 50px;
-    width: 80px;
     margin-left: 10px;
 }
 
@@ -28,7 +32,7 @@ background-color: #E4E7EA ;
 display: flex;
 justify-content: center;
 align-items: center;
-
+margin-right: 10px;
 }
 
 .plus{
@@ -40,6 +44,7 @@ align-items: center;
     margin-right: 10px;
     margin-top: 10px;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .todo{
